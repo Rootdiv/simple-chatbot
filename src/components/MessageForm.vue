@@ -13,7 +13,7 @@
 	const userMessage = ref<string>('');
 
 	const sendMessage = () => {
-		if (userMessage.value.trim() === '' || !/[a-zёа-я]+/i.test(userMessage.value)) {
+		if (userMessage.value.trim() === '' || !/[a-zёа-я\s]+/i.test(userMessage.value)) {
 			userMessage.value = '';
 			return;
 		}
